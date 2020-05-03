@@ -17,15 +17,53 @@ struct MLHighlight: View {
     @ObservedObject var taskRecommendations = Recommender()
     
     var body : some View {
-        ForEach(taskRecommendations.tasks[0..<min(1,taskRecommendations.tasks.count)]) { task in
-            VStack {
-                Text(task.name)
-                    .font(.title)
-                    .frame(width: 500, height: 100)
-                    .background(Color.blue.opacity(5))
+        ScrollView(.horizontal) {
+            HStack(spacing: 20) {
+                Text("Remember, today is Sarah's birthday!")
+                    .font(.headline)
+                    .frame(width: 250, height: 280, alignment: .center)
+                    
+                    .background(Image("birthday")
+                        .resizable()
+                        .frame(width: 300, height: 300, alignment: .center)
+                        .shadow(radius: 10)
+                        .overlay(Rectangle().stroke(Color.white, lineWidth: 2))
+                )
+                Spacer(minLength: 10)
+                Text("Don't forget your medications!")
+                    .font(.headline)
+                    .frame(width: 250, height: 280, alignment: .center)
+                    
+                    .background(Image("medication")
+                        .resizable()
+                        .frame(width: 300, height: 300, alignment: .center)
+                        .clipped()
+                        .shadow(radius: 10)
+                        .overlay(Rectangle().stroke(Color.white, lineWidth: 2))
+                        
+                )
+                Spacer(minLength: 10)
+
+                
+                Text("Tea with Beth!")
+                    .font(.headline)
+                    .frame(width: 250, height: 280, alignment: .center)
+                    
+                    .background(Image("tea")
+                        .resizable()
+                        .frame(width: 300, height: 300, alignment: .center)
+                        .shadow(radius: 10)
+                        .overlay(Rectangle().stroke(Color.white, lineWidth: 2))
+                        
+                        
+                )
+                Spacer(minLength: 10)
+
             }
-            
+            .frame(height: 350)
         }
+        .frame(height: 350)
+
     }
 }
 

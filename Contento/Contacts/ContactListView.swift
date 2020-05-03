@@ -1,15 +1,15 @@
 //
-//  SwiftUIView.swift
+//  ContactsDataStorage.swift
 //  Contento
 //
-//  Created by Sanchitha Dinesh on 4/24/20.
+//  Created by Sanchitha Dinesh on 4/13/20.
 //  Copyright © 2020 hackathon. All rights reserved.
 //
 
 import SwiftUI
 import Contacts
 
-struct ContactView: View {
+struct ContactListView: View {
     let store = CNContactStore()
     @State var contacts = [Contact]()
     @State var fetchedContacts = [Contact]()
@@ -23,6 +23,17 @@ struct ContactView: View {
                         .padding(.vertical)
                     }
                 }
+//                ScrollView(.horizontal, content: {
+//                        HStack(spacing: 10) {
+//                            ForEach(contacts) { contact in
+//                                NavigationLink(destination: ContactDetailsView(contact: contact)) {
+//                                    ContactListRow(contact: contact)
+//                                    //.padding(.vertical)
+//                                }
+//                            }
+//                        }
+//                        .padding(.leading, 10)
+                   // })
             }
             .navigationBarTitle("Contacts")
             .navigationBarItems(trailing:
@@ -79,7 +90,7 @@ struct ContactView: View {
     
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct ContactListView_Previews: PreviewProvider {
     static var previews: some View {
         let contact = CNMutableContact()
         contact.givenName = "John"

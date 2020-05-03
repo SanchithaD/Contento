@@ -10,7 +10,7 @@ import SwiftUI
 import Contacts
 
 /// Main Content View
-struct ContentView : View {
+struct HomeContactView : View {
     
     /// statuses
     
@@ -20,23 +20,28 @@ struct ContentView : View {
     var body: some View {
         
         //NavigationView {
-        List {
+        //List {
             // statuses
             ScrollView(.horizontal, content: {
                 HStack(spacing: 10) {
-                    ForEach(contacts.contacts[0..<min(3,contacts.contacts.count)]) { contact in
+                    ForEach(contacts.contacts[0..<min(5,contacts.contacts.count)]) { contact in
                         NavigationLink(destination: ContactDetailsView(contact: contact)) {
                             StatusView(contact: contact)
                                 //.padding(.vertical)
                             .padding(.top, 30)
+                            
                         }.buttonStyle(PlainButtonStyle())
                         
                     }
+                    NavigationLink(destination: ContactListView()) {
+                        Text("All Contacts")
+                    }
                 }
-                .padding(.leading, 10)
+                    
+                .padding()
             })
                 .frame(height: 40)
-        }
+        //}
         //.padding(.leading, -20)
         //.padding(.trailing, -20)
     }
