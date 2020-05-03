@@ -1,0 +1,21 @@
+{
+  "images" : [
+    {
+      "filename" : "5D-Diamond-Painting-DIY-Semi-finished-Dandelion-Plant-Flower-Aesthetic-Simple-Style-Home-Bedroom-Office-Living.jpg",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
