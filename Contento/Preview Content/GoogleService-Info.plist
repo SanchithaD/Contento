@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>502792728953-hckdnvva137itk0r7aqcqfn6honhl28l.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.502792728953-hckdnvva137itk0r7aqcqfn6honhl28l</string>
+	<key>API_KEY</key>
+	<string>AIzaSyBZmXrYFrc40NHYQBfNdYiWSXqwxQSCr_0</string>
+	<key>GCM_SENDER_ID</key>
+	<string>502792728953</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.Contento</string>
+	<key>PROJECT_ID</key>
+	<string>contento-b2de0</string>
+	<key>STORAGE_BUCKET</key>
+	<string>contento-b2de0.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:502792728953:ios:15480fa804eb1959027fa8</string>
+	<key>DATABASE_URL</key>
+	<string>https://contento-b2de0.firebaseio.com</string>
+</dict>
+</plist>

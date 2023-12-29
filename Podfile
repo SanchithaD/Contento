@@ -6,6 +6,13 @@ target 'Contento' do
   use_frameworks!
 
   # Pods for Contento
+  pod 'Resolver'
+  pod 'Disk', '~> 0.6.4'
+  
   pod 'Firebase/Auth'
+  pod 'Firebase/Analytics'
   pod 'Firebase/Firestore'
+  pod 'FirebaseFirestoreSwift'
+  
+  pod 'Firebase/Functions'
 end

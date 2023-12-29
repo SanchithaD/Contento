@@ -21,13 +21,14 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
 
      
-      
+        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        let welcomeView = WelcomeView().environment(\.managedObjectContext, context)
         // Use a UIHostingController as window root view controller.
         if let windowScene = scene as? UIWindowScene {
             let window = UIWindow(windowScene: windowScene)
 
-
-            window.rootViewController = UIHostingController(rootView: WelcomeView())
+            
+            window.rootViewController = UIHostingController(rootView: welcomeView)
        
             self.window = window
             window.makeKeyAndVisible()
@@ -52,8 +53,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     }
 
     func sceneWillEnterForeground(_ scene: UIScene) {
-        // Called as the scene transitions from the background to the foreground.
-        // Use this method to undo the changes made on entering the background.
+
     }
 
     func sceneDidEnterBackground(_ scene: UIScene) {
@@ -62,7 +62,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // to restore the scene back to its current state.
 
         // Save changes in the application's managed object context when the application transitions to the background.
-        (UIApplication.shared.delegate as? AppDelegate)?.saveContext()
     }
 
 
