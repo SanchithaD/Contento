@@ -8,14 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		4A2CDAF4113F30D1D930BC7A /* Pods_Contento.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCC6CF213F79B0007F720399 /* Pods_Contento.framework */; };
-		BF262E64245BE2A400D125A3 /* EmergencyContacts.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF262E5D245BE2A400D125A3 /* EmergencyContacts.swift */; };
+		BF12C6BA245E9E2C00E4508F /* audio2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = BF12C6A9245E9E2A00E4508F /* audio2.mp3 */; };
+		BF12C6BB245E9E2C00E4508F /* ReceipeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF12C6AA245E9E2A00E4508F /* ReceipeView.swift */; };
+		BF12C6BC245E9E2C00E4508F /* BreatheView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF12C6AB245E9E2A00E4508F /* BreatheView.swift */; };
+		BF12C6BD245E9E2C00E4508F /* Games.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF12C6AC245E9E2A00E4508F /* Games.swift */; };
+		BF12C6BE245E9E2C00E4508F /* memoryScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF12C6AD245E9E2B00E4508F /* memoryScreen.swift */; };
+		BF12C6BF245E9E2C00E4508F /* FlagGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF12C6AE245E9E2B00E4508F /* FlagGame.swift */; };
+		BF12C6C0245E9E2C00E4508F /* SleepCalculator.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = BF12C6AF245E9E2B00E4508F /* SleepCalculator.mlmodel */; };
+		BF12C6C1245E9E2C00E4508F /* SoundsCalmtento.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF12C6B0245E9E2B00E4508F /* SoundsCalmtento.swift */; };
+		BF12C6C3245E9E2C00E4508F /* audio3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = BF12C6B2245E9E2B00E4508F /* audio3.mp3 */; };
+		BF12C6C4245E9E2C00E4508F /* WarGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF12C6B3245E9E2B00E4508F /* WarGame.swift */; };
+		BF12C6C6245E9E2C00E4508F /* 2 Minutes Relaxing Sound of RainDestress and reliefNature Sound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = BF12C6B5245E9E2B00E4508F /* 2 Minutes Relaxing Sound of RainDestress and reliefNature Sound.mp3 */; };
+		BF12C6C8245E9E2C00E4508F /* WordGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF12C6B7245E9E2C00E4508F /* WordGame.swift */; };
+		BF12C6C9245E9E2C00E4508F /* SleepView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF12C6B8245E9E2C00E4508F /* SleepView.swift */; };
+		BF12C6FA245EA33600E4508F /* start.txt in Resources */ = {isa = PBXBuildFile; fileRef = BF12C6F9245EA33600E4508F /* start.txt */; };
 		BF262E65245BE2A400D125A3 /* HomeContactView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF262E5E245BE2A400D125A3 /* HomeContactView.swift */; };
 		BF262E66245BE2A400D125A3 /* ContactListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF262E5F245BE2A400D125A3 /* ContactListView.swift */; };
 		BF262E67245BE2A400D125A3 /* ContactsDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF262E60245BE2A400D125A3 /* ContactsDetailsView.swift */; };
 		BF262E68245BE2A400D125A3 /* ContactListRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF262E61245BE2A400D125A3 /* ContactListRow.swift */; };
-		BF262E69245BE2A400D125A3 /* ContactView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF262E62245BE2A400D125A3 /* ContactView.swift */; };
 		BF262E6A245BE2A400D125A3 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF262E63245BE2A400D125A3 /* Contact.swift */; };
-		BF262E78245BE3DB00D125A3 /* StatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF262E73245BE3DA00D125A3 /* StatusView.swift */; };
+		BF262E78245BE3DB00D125A3 /* ContactView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF262E73245BE3DA00D125A3 /* ContactView.swift */; };
 		BF262E79245BE3DB00D125A3 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF262E74245BE3DA00D125A3 /* WelcomeView.swift */; };
 		BF262E7A245BE3DB00D125A3 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF262E75245BE3DA00D125A3 /* SignInView.swift */; };
 		BF262E7B245BE3DB00D125A3 /* Row.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF262E76245BE3DA00D125A3 /* Row.swift */; };
@@ -33,8 +45,8 @@
 		BF43BF28241ECDC900FD7326 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF43BF27241ECDC900FD7326 /* SceneDelegate.swift */; };
 		BF43BF2F241ECDCB00FD7326 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF43BF2E241ECDCB00FD7326 /* Preview Assets.xcassets */; };
 		BF43BF32241ECDCB00FD7326 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF43BF30241ECDCB00FD7326 /* LaunchScreen.storyboard */; };
-		BF43BF4C24216F2400FD7326 /* Games.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF43BF4B24216F2400FD7326 /* Games.swift */; };
 		BF43BF4E24216F9800FD7326 /* HealthRecords.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF43BF4D24216F9800FD7326 /* HealthRecords.swift */; };
+		BF58FCAA246003E600C643D3 /* NameOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF58FCA9246003E600C643D3 /* NameOverlay.swift */; };
 		BF6EE128243E9F9500975647 /* AppTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6EE127243E9F9500975647 /* AppTitleView.swift */; };
 		BF93F3562456515300F257D3 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BF93F3542456515300F257D3 /* Model.xcdatamodeld */; };
 		BFB46C292442B1A1002FF408 /* CaptureImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB46C282442B1A1002FF408 /* CaptureImageView.swift */; };
@@ -45,14 +57,26 @@
 /* Begin PBXFileReference section */
 		7A06642956E338C27B2851CF /* Pods-Contento.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Contento.debug.xcconfig"; path = "Target Support Files/Pods-Contento/Pods-Contento.debug.xcconfig"; sourceTree = "<group>"; };
 		9B1560B25D28E702C9D362B4 /* Pods-Contento.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Contento.release.xcconfig"; path = "Target Support Files/Pods-Contento/Pods-Contento.release.xcconfig"; sourceTree = "<group>"; };
-		BF262E5D245BE2A400D125A3 /* EmergencyContacts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmergencyContacts.swift; sourceTree = "<group>"; };
+		BF12C6A9245E9E2A00E4508F /* audio2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = audio2.mp3; sourceTree = "<group>"; };
+		BF12C6AA245E9E2A00E4508F /* ReceipeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReceipeView.swift; sourceTree = "<group>"; };
+		BF12C6AB245E9E2A00E4508F /* BreatheView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BreatheView.swift; sourceTree = "<group>"; };
+		BF12C6AC245E9E2A00E4508F /* Games.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Games.swift; sourceTree = "<group>"; };
+		BF12C6AD245E9E2B00E4508F /* memoryScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = memoryScreen.swift; sourceTree = "<group>"; };
+		BF12C6AE245E9E2B00E4508F /* FlagGame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlagGame.swift; sourceTree = "<group>"; };
+		BF12C6AF245E9E2B00E4508F /* SleepCalculator.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = SleepCalculator.mlmodel; sourceTree = "<group>"; };
+		BF12C6B0245E9E2B00E4508F /* SoundsCalmtento.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoundsCalmtento.swift; sourceTree = "<group>"; };
+		BF12C6B2245E9E2B00E4508F /* audio3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = audio3.mp3; sourceTree = "<group>"; };
+		BF12C6B3245E9E2B00E4508F /* WarGame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WarGame.swift; sourceTree = "<group>"; };
+		BF12C6B5245E9E2B00E4508F /* 2 Minutes Relaxing Sound of RainDestress and reliefNature Sound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "2 Minutes Relaxing Sound of RainDestress and reliefNature Sound.mp3"; sourceTree = "<group>"; };
+		BF12C6B7245E9E2C00E4508F /* WordGame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordGame.swift; sourceTree = "<group>"; };
+		BF12C6B8245E9E2C00E4508F /* SleepView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SleepView.swift; sourceTree = "<group>"; };
+		BF12C6F9245EA33600E4508F /* start.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = start.txt; sourceTree = "<group>"; };
 		BF262E5E245BE2A400D125A3 /* HomeContactView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeContactView.swift; sourceTree = "<group>"; };
 		BF262E5F245BE2A400D125A3 /* ContactListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactListView.swift; sourceTree = "<group>"; };
 		BF262E60245BE2A400D125A3 /* ContactsDetailsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactsDetailsView.swift; sourceTree = "<group>"; };
 		BF262E61245BE2A400D125A3 /* ContactListRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactListRow.swift; sourceTree = "<group>"; };
-		BF262E62245BE2A400D125A3 /* ContactView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactView.swift; sourceTree = "<group>"; };
 		BF262E63245BE2A400D125A3 /* Contact.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
-		BF262E73245BE3DA00D125A3 /* StatusView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusView.swift; sourceTree = "<group>"; };
+		BF262E73245BE3DA00D125A3 /* ContactView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactView.swift; sourceTree = "<group>"; };
 		BF262E74245BE3DA00D125A3 /* WelcomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
 		BF262E75245BE3DA00D125A3 /* SignInView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
 		BF262E76245BE3DA00D125A3 /* Row.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Row.swift; sourceTree = "<group>"; };
@@ -74,8 +98,8 @@
 		BF43BF2E241ECDCB00FD7326 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		BF43BF31241ECDCB00FD7326 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BF43BF33241ECDCB00FD7326 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BF43BF4B24216F2400FD7326 /* Games.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Games.swift; sourceTree = "<group>"; };
 		BF43BF4D24216F9800FD7326 /* HealthRecords.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthRecords.swift; sourceTree = "<group>"; };
+		BF58FCA9246003E600C643D3 /* NameOverlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameOverlay.swift; sourceTree = "<group>"; };
 		BF6EE127243E9F9500975647 /* AppTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTitleView.swift; sourceTree = "<group>"; };
 		BF93F3552456515300F257D3 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		BFB46C282442B1A1002FF408 /* CaptureImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptureImageView.swift; sourceTree = "<group>"; };
@@ -120,13 +144,13 @@
 		BF262E5C245BE2A400D125A3 /* Contacts */ = {
 			isa = PBXGroup;
 			children = (
-				BF262E5D245BE2A400D125A3 /* EmergencyContacts.swift */,
 				BF262E5E245BE2A400D125A3 /* HomeContactView.swift */,
 				BF262E5F245BE2A400D125A3 /* ContactListView.swift */,
 				BF262E60245BE2A400D125A3 /* ContactsDetailsView.swift */,
 				BF262E61245BE2A400D125A3 /* ContactListRow.swift */,
-				BF262E62245BE2A400D125A3 /* ContactView.swift */,
 				BF262E63245BE2A400D125A3 /* Contact.swift */,
+				BF262E73245BE3DA00D125A3 /* ContactView.swift */,
+				BF58FCA9246003E600C643D3 /* NameOverlay.swift */,
 			);
 			path = Contacts;
 			sourceTree = "<group>";
@@ -136,7 +160,6 @@
 			children = (
 				BF6EE127243E9F9500975647 /* AppTitleView.swift */,
 				BF3A6657244C037D00FB77DF /* GridStack.swift */,
-				BF262E73245BE3DA00D125A3 /* StatusView.swift */,
 				BF262E74245BE3DA00D125A3 /* WelcomeView.swift */,
 				BF262E75245BE3DA00D125A3 /* SignInView.swift */,
 				BF262E76245BE3DA00D125A3 /* Row.swift */,
@@ -157,7 +180,20 @@
 		BF262E82245BE46F00D125A3 /* Games */ = {
 			isa = PBXGroup;
 			children = (
-				BF43BF4B24216F2400FD7326 /* Games.swift */,
+				BF12C6B5245E9E2B00E4508F /* 2 Minutes Relaxing Sound of RainDestress and reliefNature Sound.mp3 */,
+				BF12C6B8245E9E2C00E4508F /* SleepView.swift */,
+				BF12C6AA245E9E2A00E4508F /* ReceipeView.swift */,
+				BF12C6A9245E9E2A00E4508F /* audio2.mp3 */,
+				BF12C6B2245E9E2B00E4508F /* audio3.mp3 */,
+				BF12C6AB245E9E2A00E4508F /* BreatheView.swift */,
+				BF12C6F9245EA33600E4508F /* start.txt */,
+				BF12C6AC245E9E2A00E4508F /* Games.swift */,
+				BF12C6AE245E9E2B00E4508F /* FlagGame.swift */,
+				BF12C6AD245E9E2B00E4508F /* memoryScreen.swift */,
+				BF12C6AF245E9E2B00E4508F /* SleepCalculator.mlmodel */,
+				BF12C6B0245E9E2B00E4508F /* SoundsCalmtento.swift */,
+				BF12C6B3245E9E2B00E4508F /* WarGame.swift */,
+				BF12C6B7245E9E2C00E4508F /* WordGame.swift */,
 			);
 			name = Games;
 			path = Contento/Games;
@@ -308,6 +344,10 @@
 			files = (
 				BF43BF32241ECDCB00FD7326 /* LaunchScreen.storyboard in Resources */,
 				BFB46C2B2444E3F9002FF408 /* GoogleService-Info.plist in Resources */,
+				BF12C6C6245E9E2C00E4508F /* 2 Minutes Relaxing Sound of RainDestress and reliefNature Sound.mp3 in Resources */,
+				BF12C6BA245E9E2C00E4508F /* audio2.mp3 in Resources */,
+				BF12C6C3245E9E2C00E4508F /* audio3.mp3 in Resources */,
+				BF12C6FA245EA33600E4508F /* start.txt in Resources */,
 				BF43BF2F241ECDCB00FD7326 /* Preview Assets.xcassets in Resources */,
 				BF262E8A245BE5F400D125A3 /* Assets.xcassets in Resources */,
 			);
@@ -368,26 +408,34 @@
 				BF262E81245BE43500D125A3 /* LocationManager.swift in Sources */,
 				BFB46C292442B1A1002FF408 /* CaptureImageView.swift in Sources */,
 				BF262E94245BE6C800D125A3 /* Contento Recommender 1.mlmodel in Sources */,
-				BF43BF4C24216F2400FD7326 /* Games.swift in Sources */,
-				BF262E78245BE3DB00D125A3 /* StatusView.swift in Sources */,
+				BF262E78245BE3DB00D125A3 /* ContactView.swift in Sources */,
 				BF93F3562456515300F257D3 /* Model.xcdatamodeld in Sources */,
 				BF262E90245BE64100D125A3 /* ToDoItem.swift in Sources */,
 				BF262E68245BE2A400D125A3 /* ContactListRow.swift in Sources */,
 				BF262E92245BE64100D125A3 /* ToDoList.swift in Sources */,
-				BF262E64245BE2A400D125A3 /* EmergencyContacts.swift in Sources */,
+				BF12C6C8245E9E2C00E4508F /* WordGame.swift in Sources */,
 				BF3A6658244C037D00FB77DF /* GridStack.swift in Sources */,
+				BF12C6BE245E9E2C00E4508F /* memoryScreen.swift in Sources */,
 				BF43BF4E24216F9800FD7326 /* HealthRecords.swift in Sources */,
+				BF12C6C4245E9E2C00E4508F /* WarGame.swift in Sources */,
 				BF262E7C245BE3DB00D125A3 /* SignUpView.swift in Sources */,
 				BFB5763B24513D6B008782C2 /* MLHighlight.swift in Sources */,
 				BF262E67245BE2A400D125A3 /* ContactsDetailsView.swift in Sources */,
+				BF12C6C0245E9E2C00E4508F /* SleepCalculator.mlmodel in Sources */,
 				BF262E65245BE2A400D125A3 /* HomeContactView.swift in Sources */,
 				BF6EE128243E9F9500975647 /* AppTitleView.swift in Sources */,
+				BF12C6C9245E9E2C00E4508F /* SleepView.swift in Sources */,
 				BF262E80245BE43500D125A3 /* ContactMapView.swift in Sources */,
+				BF12C6C1245E9E2C00E4508F /* SoundsCalmtento.swift in Sources */,
 				BF262E6A245BE2A400D125A3 /* Contact.swift in Sources */,
-				BF262E69245BE2A400D125A3 /* ContactView.swift in Sources */,
 				BF262E79245BE3DB00D125A3 /* WelcomeView.swift in Sources */,
+				BF12C6BB245E9E2C00E4508F /* ReceipeView.swift in Sources */,
+				BF58FCAA246003E600C643D3 /* NameOverlay.swift in Sources */,
 				BF43BF28241ECDC900FD7326 /* SceneDelegate.swift in Sources */,
+				BF12C6BD245E9E2C00E4508F /* Games.swift in Sources */,
 				BF262E7B245BE3DB00D125A3 /* Row.swift in Sources */,
+				BF12C6BF245E9E2C00E4508F /* FlagGame.swift in Sources */,
+				BF12C6BC245E9E2C00E4508F /* BreatheView.swift in Sources */,
 				BF262E7A245BE3DB00D125A3 /* SignInView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

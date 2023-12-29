@@ -18,12 +18,12 @@ struct ContactMapView: UIViewRepresentable {
     }
     func updateUIView(_ view: MKMapView, context: Context){
         
-        var userLatitude: Float {
-            return Float(locationManager.lastLocation?.coordinate.latitude ?? 0)
+        var userLatitude: Double {
+            return Double(Float(locationManager.lastLocation?.coordinate.latitude ?? 0))
         }
         
-        var userLongitude: Float {
-            return Float(locationManager.lastLocation?.coordinate.longitude ?? 0)
+        var userLongitude: Double {
+            return Double(Float(locationManager.lastLocation?.coordinate.longitude ?? 0))
         }
         let coordinate = CLLocationCoordinate2D(
             latitude: CLLocationDegrees(userLatitude), longitude: CLLocationDegrees(userLongitude))
@@ -39,4 +39,24 @@ struct ContactMapView_Previews: PreviewProvider {
     static var previews: some View {
         ContactMapView()
     }
+}
+
+struct HomeMapView : View {
+
+/// statuses
+
+/// view body
+var body: some View {
+
+    VStack(spacing: 10) {
+        ContactMapView().overlay(Text("Go Home")
+        .font(.title)
+        .fontWeight(.semibold)
+        .foregroundColor(Color.white)
+        .frame(width: 250, height: 70)
+        .background(Color.blue.opacity(0.6)
+        .cornerRadius(15))
+        .padding(.top, 10), alignment: .top)
+    }
+}
 }

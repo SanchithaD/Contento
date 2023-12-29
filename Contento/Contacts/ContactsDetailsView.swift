@@ -3,7 +3,7 @@
 //  Contento
 //
 //  Created by Sanchitha Dinesh on 4/16/20.
-//  Copyright © 2020 hackathon. All rights reserved.
+//  Copyright © 2020 Sanchitha Dinesh. All rights reserved.
 //
 
 import SwiftUI
@@ -19,22 +19,12 @@ struct ContactDetailsView: View {
     var body: some View {
         ScrollView {
             VStack {
-                //if contact.image != nil {
-                    contact.image
-                        .resizable()
-                        .frame(width: 60, height: 60, alignment: .center)
-                        .clipShape(Circle())
-                        .shadow(radius: 10)
-                        .overlay(Circle().stroke(Color.white, lineWidth: 2))
-//                } else {
-//                    Image(systemName: "person.fill")
-//                        .resizable()
-//                        .frame(width: 60, height: 60, alignment: .center)
-//                        .clipShape(Circle())
-//                        .shadow(radius: 10)
-//                        .padding(5)
-//                        .overlay(Circle().stroke(Color.white, lineWidth: 2))
-//                }
+                contact.image
+                    .resizable()
+                    .frame(width: 60, height: 60, alignment: .center)
+                    .clipShape(Circle())
+                    .shadow(radius: 10)
+                    .overlay(Circle().stroke(Color.white, lineWidth: 2))
                 Text(contact.fullName)
                 
                 HStack(spacing: 25.0) {
@@ -46,7 +36,6 @@ struct ContactDetailsView: View {
                     ActionButton(text: "call", icon: "phone.fill", isEnabled: false)
                     ActionButton(text: "video", icon: "video.fill", isEnabled: false)
                     ActionButton(text: "mail", icon: "envelope.fill") {
-//                        self.presentMailCompose(to: self.contact.email)
                         UIApplication.shared.open(URL(string: "mailto:\(self.contact.email)")!)
                     }
                 }
@@ -105,7 +94,7 @@ struct ActionButton: View {
 }
 
 extension ContactDetailsView {
-
+    
     private class MailComposerDelegate: NSObject, MFMailComposeViewControllerDelegate {
         func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
             
@@ -145,7 +134,7 @@ extension ContactDetailsView {
         let composeVC = MFMessageComposeViewController()
         composeVC.messageComposeDelegate = messageComposeDelegate
         composeVC.recipients = [recipient]
-
+        
         vc?.present(composeVC, animated: true)
     }
 }

@@ -3,7 +3,7 @@
 //  Contento
 //
 //  Created by Sanchitha Dinesh on 4/13/20.
-//  Copyright © 2020 hackathon. All rights reserved.
+//  Copyright © 2020 Sanchitha Dinesh. All rights reserved.
 //
 
 import SwiftUI
@@ -23,17 +23,6 @@ struct ContactListView: View {
                         .padding(.vertical)
                     }
                 }
-//                ScrollView(.horizontal, content: {
-//                        HStack(spacing: 10) {
-//                            ForEach(contacts) { contact in
-//                                NavigationLink(destination: ContactDetailsView(contact: contact)) {
-//                                    ContactListRow(contact: contact)
-//                                    //.padding(.vertical)
-//                                }
-//                            }
-//                        }
-//                        .padding(.leading, 10)
-                   // })
             }
             .navigationBarTitle("Contacts")
             .navigationBarItems(trailing:

@@ -3,7 +3,7 @@
 //  Contento
 //
 //  Created by Sanchitha Dinesh on 4/22/20.
-//  Copyright © 2020 hackathon. All rights reserved.
+//  Copyright © 2020 Sanchitha Dinesh. All rights reserved.
 //
 
 import SwiftUI
@@ -18,51 +18,40 @@ struct MLHighlight: View {
     
     var body : some View {
         ScrollView(.horizontal) {
-            HStack(spacing: 20) {
-                Text("Remember, today is Sarah's birthday!")
-                    .font(.headline)
-                    .frame(width: 250, height: 280, alignment: .center)
-                    
-                    .background(Image("birthday")
-                        .resizable()
-                        .frame(width: 300, height: 300, alignment: .center)
-                        .shadow(radius: 10)
-                        .overlay(Rectangle().stroke(Color.white, lineWidth: 2))
-                )
-                Spacer(minLength: 10)
+            HStack(spacing: 70) {
+
                 Text("Don't forget your medications!")
                     .font(.headline)
-                    .frame(width: 250, height: 280, alignment: .center)
+                    .foregroundColor(.white)
+                    .frame(width: 150, height: 150, alignment: .center)
                     
-                    .background(Image("medication")
-                        .resizable()
-                        .frame(width: 300, height: 300, alignment: .center)
-                        .clipped()
-                        .shadow(radius: 10)
-                        .overlay(Rectangle().stroke(Color.white, lineWidth: 2))
-                        
+                    .background(RadialGradient(gradient: Gradient(colors: [.blue, .black]), center: .center, startRadius: 2, endRadius: 650)
+                        .frame(width: 200, height: 200)
                 )
-                Spacer(minLength: 10)
+                Text("Remember, today is Amma's birthday!")
+                    .font(.headline)
+                    .foregroundColor(.blue)
+                    .frame(width: 150, height: 150, alignment: .center)
 
-                
+                    .background(Image("birthday")
+                        .resizable()
+                        .frame(width: 200, height: 200, alignment: .center)
+                        .shadow(radius: 10)
+                )
                 Text("Tea with Beth!")
                     .font(.headline)
-                    .frame(width: 250, height: 280, alignment: .center)
+                    .foregroundColor(.white)
+                    .frame(width: 150, height: 150, alignment: .center)
                     
-                    .background(Image("tea")
-                        .resizable()
-                        .frame(width: 300, height: 300, alignment: .center)
-                        .shadow(radius: 10)
-                        .overlay(Rectangle().stroke(Color.white, lineWidth: 2))
-                        
-                        
+                    .background(RadialGradient(gradient: Gradient(colors: [.pink, .black]), center: .center, startRadius: 2, endRadius: 650)
+                        .frame(width: 200, height: 200)
+
                 )
-                Spacer(minLength: 10)
 
             }
-            .frame(height: 350)
+            .frame(height: 300)
         }
-        .frame(height: 350)
+        .frame(height: 300)
 
     }
 }

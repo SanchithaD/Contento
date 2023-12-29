@@ -1,15 +1,15 @@
 //
-//  contentview.swift
+//  HomeContactView.swift
 //  Contento
 //
 //  Created by Sanchitha Dinesh on 4/25/20.
-//  Copyright © 2020 hackathon. All rights reserved.
+//  Copyright © 2020 Sanchitha Dinesh. All rights reserved.
 //
 
 import SwiftUI
 import Contacts
 
-/// Main Content View
+/// Main Contact View
 struct HomeContactView : View {
     
     /// statuses
@@ -18,35 +18,26 @@ struct HomeContactView : View {
     
     /// view body
     var body: some View {
-        
-        //NavigationView {
-        //List {
-            // statuses
-            ScrollView(.horizontal, content: {
-                HStack(spacing: 10) {
-                    ForEach(contacts.contacts[0..<min(5,contacts.contacts.count)]) { contact in
-                        NavigationLink(destination: ContactDetailsView(contact: contact)) {
-                            StatusView(contact: contact)
-                                //.padding(.vertical)
+
+        ScrollView(.horizontal, content: {
+            HStack(spacing: 10) {
+                ForEach(contacts.contacts[0..<min(7,contacts.contacts.count)]) { contact in
+                    NavigationLink(destination: ContactDetailsView(contact: contact)) {
+                        ContactView(contact: contact)
                             .padding(.top, 30)
-                            
-                        }.buttonStyle(PlainButtonStyle())
                         
-                    }
-                    NavigationLink(destination: ContactListView()) {
-                        Text("All Contacts")
-                    }
-                }
+                    }.buttonStyle(PlainButtonStyle())
                     
-                .padding()
-            })
-                .frame(height: 40)
-        //}
-        //.padding(.leading, -20)
-        //.padding(.trailing, -20)
+                }
+                NavigationLink(destination: ContactListView()) {
+                    Text("All Contacts")
+                }
+            }
+                
+            .padding()
+        })
+            .frame(height: 40)
     }
-    //}
-    
 }
 
 
@@ -65,20 +56,29 @@ class RetrieveContacts: NSObject, ObservableObject {
     override init() {
         super.init()
         let store = CNContactStore()
-        let containerID = CNContactStore().defaultContainerIdentifier()
-        let filter = CNContact.predicateForContactsInContainer(withIdentifier: containerID)
+        
+        var results: [CNContact] = []
+        
+        let fetchRequest = CNContactFetchRequest(keysToFetch: keysToFetch)
+        
+        fetchRequest.sortOrder = CNContactSortOrder.userDefault
+
+        
         do {
-            contacts = try store.unifiedContacts(matching: filter, keysToFetch: keysToFetch).map {
-                var contact = Contact(contact: $0)
-                if let imageData = $0.imageData {
+            try store.enumerateContacts(with: fetchRequest, usingBlock: { (contact, stop) -> Void in
+                let contact1 = Contact(contact: contact)
+                if let imageData = contact.imageData {
                     if let image = UIImage(data: imageData) {
-                        contact.image =  Image(uiImage: image)
+                        contact1.image =  Image(uiImage: image)
                     }
                 }
-                return contact
-            }
-        } catch {
-            print("Error")
+                results.append(contact)
+                self.contacts.append(contact1)
+                
+            })
+        }
+        catch let error as NSError {
+            print(error.localizedDescription)
         }
     }
 }

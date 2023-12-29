@@ -10,10 +10,10 @@
 import SwiftUI
 
 struct AppTitleView: View {
-    
+
     var Title: String
     var body: some View {
-        
+
         VStack {
             VStack{
                 Text("Contento") .font(.system(size: 40))
@@ -23,9 +23,7 @@ struct AppTitleView: View {
                     .padding()
                 
                 Text(Title) .font(.system(size: 24)).fontWeight(.ultraLight).frame(alignment: .topLeading)
-                .padding()
-                
-            
+                    .padding()
                 
             }.background(Color.white)
         }

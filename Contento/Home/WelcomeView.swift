@@ -15,6 +15,8 @@ public var screenWidth: CGFloat {
 public var screenHeight: CGFloat {
     return UIScreen.main.bounds.height
 }
+
+/// The Main Screen of the app
 struct WelcomeView: View {
     
     @State var signUpIsPresent: Bool = false
@@ -26,13 +28,12 @@ struct WelcomeView: View {
     var body: some View {
         
         ZStack{
-            
             if Auth.auth().currentUser != nil {
                 TabView {
                     HomeView()
                         .tabItem {
                             VStack{
-                                Image(systemName: "1.circle")
+                                Image(systemName: "house")
                                 Text("Home")
                             }
                             
@@ -41,7 +42,7 @@ struct WelcomeView: View {
                         .tabItem {
                             
                             VStack {
-                                Image(systemName: "2.circle")
+                                Image(systemName: "pencil.and.ellipsis.rectangle")
                                 Text("To-Do")
                             }
                             
@@ -49,7 +50,7 @@ struct WelcomeView: View {
                     Games()
                         .tabItem {
                             VStack {
-                                Image(systemName: "3.circle")
+                                Image(systemName: "gamecontroller")
                                 
                                 Text("Games")
                                 
@@ -58,11 +59,11 @@ struct WelcomeView: View {
                     HealthRecords()
                         .tabItem {
                             VStack {
-                                Image(systemName: "4.circle")
-                                Text("Safety")
+                                Image(systemName: "heart")
+                                Text("Health Records")
                                 
                             }.tag(4)
-
+                            
                     }
                     
                 }
@@ -139,13 +140,16 @@ struct HomeView: View {
         
         NavigationView {
             ScrollView{
-//              MLHighlight()
+                //              MLHighlight()
                 HStack {
-                    Text("Contento") .font(.system(size: 45))
+                    Text("Contento") .font(.system(size: 40))
                         .fontWeight(.thin)
                         .font(.largeTitle)
-                        .frame(alignment: .center)
                         .padding()
+                    
+                    
+                    
+                    
                     Spacer()
                     Button(action: {
                         let firebaseAuth = Auth.auth()
@@ -171,11 +175,11 @@ struct HomeView: View {
                         .fontWeight(.bold )
                     Divider()
                     
-                    NavigationLink(destination: ContactMapView()) {
+                    NavigationLink(destination: HomeMapView()) {
                         ContactMapView()
                             .frame(width: 400, height: 150)
-                             .clipped()
-                            //.padding(.leading, 20)
+                            .clipped()
+                            //.padding(10)
                             .cornerRadius(15)
                             .shadow(color: Color.black, radius: 5)
                         
@@ -187,30 +191,20 @@ struct HomeView: View {
                 VStack(alignment: .leading) {
                     Text("Emergency Contacts")
                         .font(.title)
-                        .fontWeight(.bold )
+                        .fontWeight(.bold)
+                        .padding(.leading, 20)
                     Divider()
-                    
-                    //NavigationLink(destination: ContactListView() ) {
-                    //                        VStack() {
-                    //                        Image(systemName: "person.crop.circle")
-                    //                            .foregroundColor(.black)
-                    //                        Text("Contacts to reach in time of emergency. Click alert all contacts, in time of emergency")
-                    //                            .foregroundColor(.black)
-                    //
-                    //                        }
                     
                     HomeContactView()
                         .frame(height: 175)
                         .cornerRadius(15)
-//                        .shadow(color: Color.black, radius: 5)
-                    
-                    
                     
                 }
                 VStack(alignment: .leading){
                     Text("Highlights")
                         .font(.title)
                         .fontWeight(.bold)
+                    Divider()
                     MLHighlight()
                 }
                 .padding(.all)
@@ -221,18 +215,13 @@ struct HomeView: View {
                     Divider()
                     NavigationLink(destination: Memory()){
                         PhotoPicker()
-                        .frame(width: 400, height: 300)
-                        .clipped()
-                        .overlay(NameOverlay(name: "Today's Memory"))
-
+                            .frame(width: 400, height: 300)
+                            .clipped()
+                            .overlay(NameOverlay(name: "Today's Memory"))
                     }
-                    
-                    
                 }
                 .padding(.all)
             }.navigationBarTitle("Contento", displayMode: .inline)
-            
-            
         }
     }
 }
@@ -242,35 +231,3 @@ struct HomeView_Previews: PreviewProvider {
         HomeView()
     }
 }
-//ScrollView(.horizontal, content: {
-//    HStack(spacing: 10) {
-//        Memory(photoIndex: 5)
-//            .frame(width: 150, height: 150)
-//            .cornerRadius(15)
-//            .shadow(color: Color.black, radius: 5)
-//            .clipped()
-//
-//
-//
-//        Memory(photoIndex: 8)
-//            .frame(width: 150, height: 150)
-//            .cornerRadius(15)
-//            .shadow(color: Color.black, radius: 5)
-//            .clipped()
-//
-//
-//
-//
-//        Memory(photoIndex: 12)
-//            .frame(width: 150, height: 150)
-//            .cornerRadius(15)
-//            .shadow(color: Color.black, radius: 5)
-//            .clipped()
-//        NavigationLink(destination: Memory()) {
-//            Text("Today's Memory")
-//        }
-//
-//
-//    }
-//    .padding(.leading, 10)
-//})

@@ -15,10 +15,10 @@ import UserNotifications
 
 struct ToDoList: View {
     @State var currentDate = Date()
-       let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
-     var suggestions: [String: Double] = ["Call Lily": 3.0, "Library Visit": 3.5]
+    let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
+    var suggestions: [String: Double] = ["Call Lily": 3.0, "Library Visit": 3.5]
     var recommender = Contento_Recommender_1()
-
+    
     @ObservedObject var taskRecommendations = Recommender()
     @Environment(\.managedObjectContext) var managedObjectContext
     @FetchRequest(fetchRequest: ToDoItem.getAllToDoItems()) var todoItems:FetchedResults<ToDoItem>
@@ -43,7 +43,7 @@ struct ToDoList: View {
                             }
                             
                             self.newToDoItem = ""
-                    
+                            
                         }) {
                             Image(systemName: "plus.circle.fill")
                                 .foregroundColor(.green)
@@ -71,12 +71,13 @@ struct ToDoList: View {
                 Section(header: Text("Suggested Tasks")) {
                     ForEach(taskRecommendations.tasks) { task in
                         VStack (alignment: .leading) {
-                            Text(task.name)
+                            //Text(task.name)
+                            ToDoItemView(title: task.name, createdAt: "" )
                         }
                     }
                 }
             }
-                .environment(\.defaultMinListRowHeight, 75)
+            .environment(\.defaultMinListRowHeight, 75)
             .navigationBarTitle("To-Do")
             .navigationBarItems(trailing: EditButton())
             

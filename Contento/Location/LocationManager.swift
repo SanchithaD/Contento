@@ -3,7 +3,7 @@
 //  Contento
 //
 //  Created by Sanchitha Dinesh on 4/8/20.
-//  Copyright © 2020 hackathon. All rights reserved.
+//  Copyright © 2020 Sanchitha Dinesh. All rights reserved.
 //
 
 import Foundation
@@ -61,7 +61,8 @@ class LocationManager: NSObject, ObservableObject {
 
         let addRequest = {
             let content = UNMutableNotificationContent()
-            content.title = "You moved!"
+            content.title = "Are you doing OK?"
+            content.body = "You haven't moved for the past 6 hours!"
             content.sound = UNNotificationSound.default
 
           
@@ -124,12 +125,8 @@ extension LocationManager: CLLocationManagerDelegate {
 
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         guard let location = locations.last else { return }
-        if location != self.lastLocation {
-            addNotification()
             self.lastLocation = location
-            
-        }
-        
+
         self.geocode()
         print(#function, location)
        

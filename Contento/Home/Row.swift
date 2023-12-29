@@ -3,7 +3,7 @@
 //  Contento
 //
 //  Created by Sanchitha Dinesh on 4/18/20.
-//  Copyright © 2020 hackathon. All rights reserved.
+//  Copyright © 2020 Sanchitha Dinesh. All rights reserved.
 //
 
 import SwiftUI
@@ -11,10 +11,6 @@ import Foundation
 struct Row: Identifiable {
     let id = UUID()
     let cell: Cell
-}
-
-extension Row {
-    
 }
 
 extension Row {

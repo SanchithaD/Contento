@@ -3,7 +3,7 @@
 //  Contento
 //
 //  Created by Sanchitha Dinesh on 4/13/20.
-//  Copyright © 2020 hackathon. All rights reserved.
+//  Copyright © 2020 Sanchitha Dinesh. All rights reserved.
 //
 
 import SwiftUI
@@ -80,9 +80,6 @@ class Contact: Identifiable, ObservableObject {
     
     init(contact: CNContact) {
         self.contact = contact
-//        self.fetchImageIfNeeded { (image) in
-//            self.image = image ?? Image(systemName: "person.fill")
-//        }
     }
     
     func fetchImageIfNeeded(completion: @escaping ((Image?) -> Void) = {_ in }) {
@@ -90,7 +87,6 @@ class Contact: Identifiable, ObservableObject {
             completion(nil)
             return
         }
-        
         //DispatchQueue.global(qos: .userInitiated).async { [weak self] in
         self.image = Image(uiImage: UIImage(data: imageData)!)
            // DispatchQueue.main.async {
