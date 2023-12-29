@@ -71,7 +71,7 @@ class LocationManager: NSObject, ObservableObject {
             let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: nil)
             
             // add our notification request
-            //UNUserNotificationCenter.current().add(request)
+            UNUserNotificationCenter.current().add(request)
             
             center.add(request)
             
