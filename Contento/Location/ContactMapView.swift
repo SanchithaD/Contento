@@ -31,6 +31,7 @@ struct ContactMapView: UIViewRepresentable {
         let region = MKCoordinateRegion(center: coordinate, span: span)
         view.centerCoordinate = coordinate
         view.setRegion(region, animated: true)
+        locationManager.addNotification()
     }
     
 }
