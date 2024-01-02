@@ -66,7 +66,7 @@ class LocationManager: NSObject, ObservableObject {
             content.sound = UNNotificationSound.default
 
           
-            let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 1, repeats: false)
+            let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 21600, repeats: false)
 
             let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: nil)
             
